@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+<title>Molloy Media Archaeology</title>
+<meta name="description" content="A student-led project by Molloy College. Media Archaeology in the Boyne Valley.">
+<meta name="keywords" content="Matt Applegate, Jamie Cohen, Margaret DeLima, Destinee Day, Molloy College, Molloy Life, Media Archaeology">
+<meta name='viewport' content='initial-scale=1,maximum-scale=1' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-zoomslider/v0.7.0/L.Control.Zoomslider.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-zoomslider/v0.7.0/L.Control.Zoomslider.css' rel='stylesheet' />
+<style>
+
+body, html {
+  margin:0;
+  padding:0;
+  height: 100%;
+  overflow: hidden;
+}
+
+<!--THIS DISABLES THE SCROLL FUNCTION -->
+
+html {
+  overflow-y: scroll !important;
+}
+
+<!--END SCROLLBAR BLOCK -->
+
+<!--CSS FOR MAP -->
+
+#map-container {
+            height: 70%;
+            padding-bottom: 0px;
+            margin: 0px;
+}
+
+#map {
+        display: block;
+        height: 100%;
+        width: 100%;
+}
+
+.popup {
+  text-align:center;
+}
+
+.popup .slideshow .image{
+  display:none;
+}
+
+.popup .slideshow .image.active {
+  display:block;
+}
+
+.popup .slideshow img {
+  width:100%;
+}
+
+.popup .slideshow .caption {
+  background:#eee;
+  padding:10px;
+}
+
+.popup .cycle {
+  padding:10px 0 20px;
+}
+
+.popup .cycle a.prev { float:left;
+}
+
+.popup .cycle a.next { float:right;
+}
+
+/* Adjustments to account for mapbox.css box-sizing rules */
+.leaflet-control-zoomslider-knob { width:14px; height:6px; }
+.leaflet-container .leaflet-control-zoomslider-body {
+  -webkit-box-sizing:content-box;
+     -moz-box-sizing:content-box;
+          box-sizing:content-box;
+  }
+
+<!--End CSS for Map -->
+
+</style>
+</head>
+
+<body>
+
+<div id='map'></div>
+<div id="map-container">
+
+<div id='map'></div>
+</div>
+
+
+<!-- API ACCESS FOR THE MAP -->
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoibWFwcGxlZ2EiLCJhIjoiY2lqbzk3aGVlMDB0bHRvbTVvNXB1azZxdyJ9.PpTLv2su5er4AqXhF-LK4A';
+var map = L.mapbox.map('map', 'mapbox.streets', {
+  container: 'map',
+});
+
+var myLayer = L.mapbox.featureLayer().addTo(map);
+
+var geoJson = [{
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-6.395667, 53.983818]},
+    "properties": {
+        'title': 'Molloy Media Archaeology',
+        'marker-color': '#FFFFFF',
+        'marker-symbol': 'circle',
+        'marker-size': 'large',
+
+        // Store the image url and caption in an array.
+        'images': [
+          ['http://molloymediaarchaeology.org/images/droneabove.jpg','You are about to experience an interactive map and <a href="http://molloyenglish.org/omeka-2.4">archive</a> of the Boyne Valley in Northeastern Ireland. The map and <a href="http://molloyenglish.org/omeka-2.4">archive</a> were created in the spring of 2016 by the students of SAP 261 [Media Archaeology] in consultation with <a href="http://mapplega.com">Matt Applegate</a>, <a href="http://www.jamesncohen.com/">Jamie Cohen</a>, <a href="http://margaretdelima.com/home.html">Maraget DeLima</a>, and Destinee Day.'],          ['http://molloymediaarchaeology.org/images/dkitwide.jpg','Students completed this map and archive along with a certificate in <a href="https://www.dkit.ie/news/dkit-unveils-new-programme-certificate-cultural-landscapes-newgrange-boyne-valley">Cultural Landscapes</a> at <a href="https://www.dkit.ie/">DkIT</a>, Dundalk Institute of Technology, led by professor <a href="https://www.dkit.ie/users/dr-conor-brady">Conor Brady</a>.'],
+          ['http://molloymediaarchaeology.org/images/overview.jpg','The colors attributed to each point on the map correspond to student groups and the locations they visited. Be sure to zoom in! Some markers are not immediately visible.'],
+          ['http://molloymediaarchaeology.org/images/purpleteam.jpg','<font color = "9900CC">Team Purple</font> (Krystin White, Matt Rooney, Jack Siegel, Shakhan Volmar, Liz Spencer).'],
+          ['http://molloymediaarchaeology.org/images/teamblue1.jpg','<font color = "3366FF">Team Blue</font> (Matt Considine, Ronnie Amato, Tara Burns, Liz Flood).'],
+          ['http://molloymediaarchaeology.org/images/teampink1.jpg','<font color = "FF6699">Team Pink</font> (Zack Yuzon, Milan Botte, Michael Felicio, Jorge Vilca).'],
+          ['http://molloymediaarchaeology.org/images/teamgold.jpg','<font color = "FFD700">Team Gold</font> (Grant Kuppelmeyer, Adriana Scheer, Mary Gallagher, Jared Grossman).'],
+          ['http://molloymediaarchaeology.org/images/teamorange.jpg','<font color ="FF6633">Team Orange</font> (Sheena Moore, Colleen Elliot, Don Farrell, Megan Killeen).'],
+          ['http://molloymediaarchaeology.org/images/molloylogo.jpg', '<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Molloy Media Archaeology Map & Archive</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://molloymediaarchaeology.org/archive" property="cc:attributionName" rel="cc:attributionURL">SAP 261</a>, led by <a href="http://mapplega.com">Matt Applegate</a>, <a href="http://www.jamesncohen.com/">Jamie Cohen</a>, & <a href="http://margaretdelima.com/home.html">Margaret DeLima</a>, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>. <br><br>Our map is powered by <a href="http://mapbox.com">Mapbox</a> and our archive is powered by <a href="http://omeka.org">Omeka!</a>']
+        ]
+    }
+}, {
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-5.930120, 54.597285]},
+    "properties": {
+        'title': 'Belfast Peace Lines',
+        'marker-color': '#FFFFFF',
+        'marker-symbol': 'city',
+        'marker-size': 'large',
+        'images': [
+          ['http://molloymediaarchaeology.org/images/peacewall1.jpg','The Belfast Peace Lines were constructed in 1969 and divided Catholic communities from Protestant ones.'],
+          ['http://molloymediaarchaeology.org/images/peacewall2.jpg','Molloy students visited the peace lines on May 28, 2016.'],
+          ['http://molloymediaarchaeology.org/images/peacewall3.jpg','Students wrote their names and messages on the walls, leaving a mark on the structure. Writing on the walls is a common and important act of memorialization.']
+        ]
+    }
+}, {
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-6.2603, 53.349805]},
+    "properties": {
+        'title': 'Dublin, Ireland',
+        'marker-color': '#FFFFFF',
+        'marker-symbol': 'city',
+        'marker-size': 'large',
+        'images': [
+          ['http://molloymediaarchaeology.org/images/dublintown.jpg','Students spent Sunday, May 29 in Dublin, Ireland.'],
+          ['http://molloymediaarchaeology.org/images/jervis.jpg','<iframe width="280" height="195" src="https://www.youtube.com/embed/O31ciXE9tns" frameborder="0" allowfullscreen></iframe>','Students documented what they saw and experienced.']
+        ]
+    }
+}, {
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [-6.42425, 53.72220]},
+    "properties": {
+        'title': 'The Memory Sculpture',
+        'marker-color': '#FFD700',
+        'marker-symbol': 'monument',
+        'marker-size': 'medium',
+        'images': [
+          ['http://molloymediaarchaeology.org/images/adriana_memory2.jpg','The Memory Sculpture is another piece kept within the Walled Gardens.'],
+          ['http://molloymediaarchaeology.org/images/grant_pole2.jpg','The sculpture is a remnant of another tree present at the Battle of the Boyne.'],
+          ['http://molloymediaarchaeology.org/images/grant_pole4.jpg','The wooden monument is intended to serve as a reminder to visitors that history never goes away -- it is forever present and forever a part of the people it touches.']
+        ]
+    }
+}];
+
+// Add custom popup html to each marker.
+myLayer.on('layeradd', function(e) {
+    var marker = e.layer;
+    var feature = marker.feature;
+    var images = feature.properties.images
+    var slideshowContent = '';
+
+    for(var i = 0; i < images.length; i++) {
+        var img = images[i];
+
+        slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') + '">' +
+                              '<img src="' + img[0] + '" />' +
+                              '<div class="caption">' + img[1] + '</div>' +
+                            '</div>';
+    }
+
+    // Create custom popup content
+    var popupContent =  '<div id="' + feature.properties.id + '" class="popup">' +
+                            '<h2>' + feature.properties.title + '</h2>' +
+                            '<div class="slideshow">' +
+                                slideshowContent +
+                            '</div>' +
+                            '<div class="cycle">' +
+                                '<a href="#" class="prev">&laquo; Previous</a>' +
+                                '<a href="#" class="next">Next &raquo;</a>' +
+                            '</div>'
+                        '</div>';
+
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false,
+        minWidth: 320
+    });
+});
+
+// Add features to the map
+myLayer.setGeoJSON(geoJson);
+
+$('#map').on('click', '.popup .cycle a', function() {
+    var $slideshow = $('.slideshow'),
+        $newSlide;
+
+    if ($(this).hasClass('prev')) {
+        $newSlide = $slideshow.find('.active').prev();
+        if ($newSlide.index() < 0) {
+            $newSlide = $('.image').last();
+        }
+    } else {
+        $newSlide = $slideshow.find('.active').next();
+        if ($newSlide.index() < 0) {
+            $newSlide = $('.image').first();
+        }
+    }
+
+    $slideshow.find('.active').removeClass('active').hide();
+    $newSlide.addClass('active').show();
+    return false;
+});
+
+<!-- SET THE MAP VIEW HERE -->
+map.setView([53.5, -7], 7);
+</script>
+
+
+</body>
+</html>
