@@ -22,3 +22,9 @@ If you want to get a better handle on the methodology for mapping projects like
 ours, I recommend the book Deep Mapping by Brett Bloom and Nuno Sacramento. The
 link about will allow you download the entire book (it's short, less than 100
 pages) with Google.
+
+4. <a href="discordapp.com">Discord</a>
+I've created a Discord server for our course. If
+you go to the link above, you can create log in
+information (ID and Password) for Discord. Follow
+this link to access our server: <a href="https://discord.gg/j9zmJTq">link</a>.
