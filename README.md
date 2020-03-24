@@ -5,7 +5,7 @@ GitHub and "fork" the files listed here.
 In addition to our repository, you will need a few tools to better understand
 our work. I have the listed below.
 
-1. <a href="geojson.io>GeoJSON.io</a>
+1. <a href="geojson.io">GeoJSON.io</a>
 GeoJSON.io is a website that will help us understand the relationship between
 geographical data (the stuff we collect) and the code that visualizes it
 (Javascript). We will use this as a reference throughout the class to customize
