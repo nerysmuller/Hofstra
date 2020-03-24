@@ -101,7 +101,7 @@ html {
 
 
 <!-- API ACCESS FOR THE MAP -->
-<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<script src=' ADD API KEY HERE '></script>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoibWFwcGxlZ2EiLCJhIjoiY2lqbzk3aGVlMDB0bHRvbTVvNXB1azZxdyJ9.PpTLv2su5er4AqXhF-LK4A';
 var map = L.mapbox.map('map', 'mapbox.streets', {
