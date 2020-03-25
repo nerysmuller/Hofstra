@@ -1,68 +1,136 @@
-Today we are going to set up our environment. This means that we are going to connect our text editor to our GitHub repository, allowing us to code individually and "push" our changes to our repository. This lesson is adapted from © 2017, CC BY-NC-SA 4.0 by Moacir P. de Sá Pereira.
+Today we are going to set up our environment. This means that we are going to
+connect our text editor to our GitHub repository, allowing us to code
+individually and "push" our changes to our repository. This lesson is adapted
+from © 2017, CC BY-NC-SA 4.0 by Moacir P. de Sá Pereira.
 
 Sign in to Your GitHub Account:
-The first step for our lesson today is to sign in to your Github account. If you haven't registered one, please do so at: http://github.com
+The first step for our lesson today is to sign in to your Github account. If
+you haven't registered one, please do so at: http://github.com
 
 Fork the Hofstra Repository:
-The Hofstra repository is public, meaning anyone can access it and download it. Beyond that, anyone can make an identical copy of our repository for their own use. This is called forking. You will fork our repository that you can work on it and make your own changes without altering the original repository. The next step is to fork the repository I have already made for this course.
+The Hofstra repository is public, meaning anyone can access it and download it.
+Beyond that, anyone can make an identical copy of our repository for their own
+use. This is called forking. You will fork our repository that you can work on
+it and make your own changes without altering the original repository. The next
+step is to fork the repository I have already made for this course.
 
 Here's how you fork a repository:
-While logged into GitHub, go to the following website in a new tab: https://github.com/mapplega/Hofstra
+While logged into GitHub, go to the following website in a new tab:
+https://github.com/mapplega/Hofstra
 
-Once that page loads, there should be a “Fork” button in the top-right corner. Click on that. If it asks you where to fork it, click on your user, and now the repository should appear in your account under this URL:
+Once that page loads, there should be a “Fork” button in the top-right corner.
+Click on that. If it asks you where to fork it, click on your user, and now the
+repository should appear in your account under this URL:
 
 https://github.com/YOURUSERNAME/Hofstra
 
-Where it reads YOURUSERNAME, it should read, of course, the GitHub username you chose for yourself. Make a note of this URL, as you’ll need it in a few steps.
+Where it reads YOURUSERNAME, it should read, of course, the GitHub username you
+chose for yourself. Make a note of this URL, as you’ll need it in a few steps.
 
 Atom:
-Atom is a fully-featured text editor that can also serve as an IDE (Integrated Development Environment). It also has Git (and GitHub) support built in. This makes sense; it’s part of the GitHub ecosystem. Atom is a serious program with lots and lots of features. I’ll only be teaching a few here, but I’ll also teach a few more as the course goes on.
+Atom is a fully-featured text editor that can also serve as an IDE (Integrated
+Development Environment). It also has Git (and GitHub) support built in. This
+makes sense; it’s part of the GitHub ecosystem. Atom is a serious program with
+lots and lots of features. I’ll only be teaching a few here, but I’ll also teach
+a few more as the course goes on.
 
-You can download the software from the Atom page (http://atom.io), and installation should be rather straightforward. Once you install it, when you open it, you will be greeted with a welcome tab and the welcome guide tab in a separate pane. Atom works on the visual metaphor of panes with tabs. You can change the widths of the panes and show and hide them with your mouse. Similarly, the tabs work like the tabs do in Chrome, for good reason.
+You can download the software from the Atom page (http://atom.io), and
+installation should be rather straightforward. Once you install it, when you
+open it, you will be greeted with a welcome tab and the welcome guide tab in a
+separate pane. Atom works on the visual metaphor of panes with tabs. You can
+change the widths of the panes and show and hide them with your mouse.
+Similarly, the tabs work like the tabs do in Chrome, for good reason.
 
 Start Customizing with Packages:
-From the Welcome Guide, I recommend immediately clicking on “Install a Package.” Once you click on “Install a Package,” you can click on “Open Installer” and start installing packages by searching for them and then clicking the “Install” button. Here is a list of the packages you will need to download:
+From the Welcome Guide, I recommend immediately clicking on “Install a Package.”
+Once you click on “Install a Package,” you can click on “Open Installer” and
+start installing packages by searching for them and then clicking the “Install”
+button. Here is a list of the packages you will need to download:
 
-file-icons: this gives you pretty icons in the Atom sidebar and tabs. These visual cues are, in my experience, more useful than file name extensions.
+file-icons: this gives you pretty icons in the Atom sidebar and tabs. These
+visual cues are, in my experience, more useful than file name extensions.
 
-linter-jshint: adds a linter based on JSHint for JavaScript, meaning the Atom will warn you when the JavaScript you write has problems.
+linter-jshint: adds a linter based on JSHint for JavaScript, meaning the Atom
+will warn you when the JavaScript you write has problems.
 
-open-in-browsers: this will allow you to open .html pages in your browser and view what you've made.
+open-in-browsers: this will allow you to open .html pages in your browser and
+view what you've made.
 
-For these, you have to type the name into the little search bar in the Install Packages part of the Settings tab. The linter may ask you to add some other packages to fulfill dependencies. That’s ok.
+For these, you have to type the name into the little search bar in the Install
+Packages part of the Settings tab. The linter may ask you to add some other
+packages to fulfill dependencies. That’s ok.
 
 Continue Customizing by Enabling Autosave:
-Atom ships with autosave disabled by default. That’s probably not behavior you’re expecting, so you should enable it! After you’re done installing packages, you’ll be on the Settings tab, which has a few subcategories, like Core, Editor, and so on. Choose Packages. This gives a list of all the packages you have installed, as well as giving you a chance to configure them. Type autosave into the filter box at the top, and then click on “Settings” once the autosave package shows up under “Core Packages.”
+Atom ships with autosave disabled by default. That’s probably not behavior
+you’re expecting, so you should enable it! After you’re done installing
+packages, you’ll be on the Settings tab, which has a few subcategories, like
+Core, Editor, and so on. Choose Packages. This gives a list of all the packages
+you have installed, as well as giving you a chance to configure them. Type
+autosave into the filter box at the top, and then click on “Settings” once the
+autosave package shows up under “Core Packages.”
 
-Tick the box beside “Enabled” under settings, and now Atom will autosave any file as soon as you click away from its tab, even if you go to another application.
+Tick the box beside “Enabled” under settings, and now Atom will autosave any
+file as soon as you click away from its tab, even if you go to another
+application.
 
-While the Settings tab is still open, click on “Core” and “Editor” and change things around these if you like. The defaults are pretty good, but you may want to change the “Font Family” in Editor. Type in the name of your preferred font, provided that it is installed. You can make the default text larger or smaller, and so on. One more setting to consider in Editor is “Soft Wrap.” With it off, your text will keep running off the side of the window as you type. Soft Wrap, like in Word or Notes, breaks lines so that everything fits inside the window.
+While the Settings tab is still open, click on “Core” and “Editor” and change
+things around these if you like. The defaults are pretty good, but you may want
+to change the “Font Family” in Editor. Type in the name of your preferred font,
+provided that it is installed. You can make the default text larger or smaller,
+and so on. One more setting to consider in Editor is “Soft Wrap.” With it off,
+your text will keep running off the side of the window as you type. Soft Wrap,
+like in Word or Notes, breaks lines so that everything fits inside the window.
 
-Finally, under Themes, you can do some basic changing of the user interface, theme, and the syntax theme for the editor. Pick a light one or a dark one, whichever you think fits your personality.
+Finally, under Themes, you can do some basic changing of the user interface,
+theme, and the syntax theme for the editor. Pick a light one or a dark one,
+whichever you think fits your personality.
 
 Link Atom to GitHub:
-Atom is written by the people at GitHub, so it’s pretty easy to link the two together. In fact, that’s the main reason I encourage you to install Atom. The Atom people have written a decent introduction to most of what I describe here, so it’s useful to glance over at their screenshots, etc., if this part gets too confusing.
+Atom is written by the people at GitHub, so it’s pretty easy to link the two
+together. In fact, that’s the main reason I encourage you to install Atom. The
+Atom people have written a decent introduction to most of what I describe here,
+so it’s useful to glance over at their screenshots, etc., if this part gets too
+confusing.
 
 First, you have to get the URL of the repository you forked a few steps ago:
 
 https://github.com/YOURUSERNAME/javascripting-english-major-project
 
-Again, YOURUSERNAME should be replaced with your own GitHub username. Now add .git to the end of it, so you have:
+Again, YOURUSERNAME should be replaced with your own GitHub username. Now add
+.git to the end of it, so you have:
 
 https://github.com/YOURUSERNAME/javascripting-english-major-project.git
 
 This is the URL you will need for cloning.
 
-Second, return to Atom. Here, open up the command palette by going to the “Packages” menu, choosing “Command Palette” and then “Toggle.” In the little box that opens, type “git” and choose the option labeled “GitHub: Clone.” For “Clone from,” paste or type in the URL above ending in .git with your username.
+Second, return to Atom. Here, open up the command palette by going to the
+“Packages” menu, choosing “Command Palette” and then “Toggle.” In the little
+box that opens, type “git” and choose the option labeled “GitHub: Clone.” For
+“Clone from,” paste or type in the URL above ending in .git with your username.
 
-The next step is IMPORTANT: do you see how there is an 's' after http? Delete the 's' from the url. Now you can hit return.
+The next step is IMPORTANT: do you see how there is an 's' after http? Delete
+the 's' from the url. Now you can hit return.
 
-Atom will automatically save it to a GitHub folder it creates in your home folder, but you can change this location if you like.
+Atom will automatically save it to a GitHub folder it creates in your home
+folder, but you can change this location if you like.
 
-Now, if you have the file-icons package installed, in the Projects pane, you should see a small book icon with your repository name beside it, and, underneath it, you should see a folder called .git, a file called README.md, and a few other files. These are the contents of your repository, and they are now on your computer.
+Now, if you have the file-icons package installed, in the Projects pane, you
+should see a small book icon with your repository name beside it, and,
+underneath it, you should see a folder called .git, a file called README.md,
+and a few other files. These are the contents of your repository, and they are
+now on your computer.
 
-Third, let’s make an explicit connection between GitHub and Atom. Open up the GitHub pane (“Packages” > “GitHub” > “Toggle GitHub Tab”), and you should now see a button asking you to log in or a message encouraging you to go to the GitHub Atom login page. If you don’t, make sure that your project is open and loaded in Atom. Otherwise, click on “Login” and then click on the web address, which will open a new page in your browser asking you for permission to have Atom talk to your GitHub account. Click on “Authorize atom” and then copy the extremely long code that appears. Paste it back into the GitHub pane back on Atom.
+Third, let’s make an explicit connection between GitHub and Atom. Open up the
+GitHub pane (“Packages” > “GitHub” > “Toggle GitHub Tab”), and you should now
+see a button asking you to log in or a message encouraging you to go to the
+GitHub Atom login page. If you don’t, make sure that your project is open and
+loaded in Atom. Otherwise, click on “Login” and then click on the web address,
+which will open a new page in your browser asking you for permission to have
+Atom talk to your GitHub account. Click on “Authorize atom” and then copy the
+extremely long code that appears. Paste it back into the GitHub pane back on
+Atom.
 
-You should get a message saying “No pull request could be found for the branch master,” and so on. You’ve made the connection.
+You should get a message saying “No pull request could be found for the branch
+master,” and so on. You’ve made the connection.
 
 You've done it! Your environment is set up and you are ready to code!
