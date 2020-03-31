@@ -94,12 +94,12 @@ confusing.
 
 First, you have to get the URL of the repository you forked a few steps ago:
 
-https://github.com/YOURUSERNAME/javascripting-english-major-project
+https://github.com/YOURUSERNAME/Hofstra
 
 Again, YOURUSERNAME should be replaced with your own GitHub username. Now add
 .git to the end of it, so you have:
 
-https://github.com/YOURUSERNAME/javascripting-english-major-project.git
+https://github.com/YOURUSERNAME/Hofstra.git
 
 This is the URL you will need for cloning.
 
