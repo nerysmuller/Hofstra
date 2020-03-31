@@ -10,9 +10,9 @@ you haven't registered one, please do so at: http://github.com
 Fork the Hofstra Repository:
 The Hofstra repository is public, meaning anyone can access it and download it.
 Beyond that, anyone can make an identical copy of our repository for their own
-use. This is called forking. You will fork our repository that you can work on
-it and make your own changes without altering the original repository. The next
-step is to fork the repository I have already made for this course.
+use. This is called forking. You will fork our repository so that you can work
+on it and make your own changes without altering the original repository. The
+next step is to fork the repository I have already made for this course.
 
 Here's how you fork a repository:
 While logged into GitHub, go to the following website in a new tab:
