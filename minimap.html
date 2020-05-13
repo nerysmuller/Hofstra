@@ -43,8 +43,8 @@ html {
 
 #map {
         display: block;
-        height: 50%;
-        width: 50%;
+        height: 80%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
 }
@@ -114,64 +114,67 @@ var myLayer = L.mapbox.featureLayer().addTo(map);
 
 var geoJson = [{
     type: 'Feature',
-    "geometry": { "type": "Point", "coordinates": [-6.395667, 53.983818]},
+    "geometry": { "type": "Point", "coordinates": [-73.9883708953857, 40.7542467836054]},
     "properties": {
-        'title': 'Molloy Media Archaeology',
-        'marker-color': '#FFFFFF',
-        'marker-symbol': 'circle',
-        'marker-size': 'large',
-
-        // Store the image url and caption in an array.
+        'title': 'The Opinion of a Fashion Writer',
+        'marker-color': '#0096FF',
+        'marker-symbol': 'city',
+        'marker-size': 'medium',
         'images': [
-          ['http://molloymediaarchaeology.org/images/droneabove.jpg','You are about to experience an interactive map and <a href="http://molloyenglish.org/omeka-2.4">archive</a> of the Boyne Valley in Northeastern Ireland. The map and <a href="http://molloyenglish.org/omeka-2.4">archive</a> were created in the spring of 2016 by the students of SAP 261 [Media Archaeology] in consultation with <a href="http://mapplega.com">Matt Applegate</a>, <a href="http://www.jamesncohen.com/">Jamie Cohen</a>, <a href="http://margaretdelima.com/home.html">Maraget DeLima</a>, and Destinee Day.'],          ['http://molloymediaarchaeology.org/images/dkitwide.jpg','Students completed this map and archive along with a certificate in <a href="https://www.dkit.ie/news/dkit-unveils-new-programme-certificate-cultural-landscapes-newgrange-boyne-valley">Cultural Landscapes</a> at <a href="https://www.dkit.ie/">DkIT</a>, Dundalk Institute of Technology, led by professor <a href="https://www.dkit.ie/users/dr-conor-brady">Conor Brady</a>.'],
-          ['http://molloymediaarchaeology.org/images/overview.jpg','The colors attributed to each point on the map correspond to student groups and the locations they visited. Be sure to zoom in! Some markers are not immediately visible.'],
-          ['http://molloymediaarchaeology.org/images/purpleteam.jpg','<font color = "9900CC">Team Purple</font> (Krystin White, Matt Rooney, Jack Siegel, Shakhan Volmar, Liz Spencer).'],
-          ['http://molloymediaarchaeology.org/images/teamblue1.jpg','<font color = "3366FF">Team Blue</font> (Matt Considine, Ronnie Amato, Tara Burns, Liz Flood).'],
-          ['http://molloymediaarchaeology.org/images/teampink1.jpg','<font color = "FF6699">Team Pink</font> (Zack Yuzon, Milan Botte, Michael Felicio, Jorge Vilca).'],
-          ['http://molloymediaarchaeology.org/images/teamgold.jpg','<font color = "FFD700">Team Gold</font> (Grant Kuppelmeyer, Adriana Scheer, Mary Gallagher, Jared Grossman).'],
-          ['http://molloymediaarchaeology.org/images/teamorange.jpg','<font color ="FF6633">Team Orange</font> (Sheena Moore, Colleen Elliot, Don Farrell, Megan Killeen).'],
-          ['http://molloymediaarchaeology.org/images/molloylogo.jpg', '<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Molloy Media Archaeology Map & Archive</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://molloymediaarchaeology.org/archive" property="cc:attributionName" rel="cc:attributionURL">SAP 261</a>, led by <a href="http://mapplega.com">Matt Applegate</a>, <a href="http://www.jamesncohen.com/">Jamie Cohen</a>, & <a href="http://margaretdelima.com/home.html">Margaret DeLima</a>, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>. <br><br>Our map is powered by <a href="http://mapbox.com">Mapbox</a> and our archive is powered by <a href="http://omeka.org">Omeka!</a>']
+          ['https://drive.google.com/uc?id=1CCC0m-PSPVdKMI2r-4BTpcNfxi549Ppr','Primarily based in New York, Giulia Baldini, a graduating Senior at Hofstra University, is an Italian-Brazilian student who is trying to make a difference in not only her community, but her entire country.'],
+          ['https://drive.google.com/uc?id=1Xn5AtfsLIFhS5aYOl4LicRnn5mJEqYiE','This is the Garment District in NYC where Giulia Baldini began her overseas research into the Fashion Industry.']
         ]
     }
 }, {
     type: 'Feature',
-    "geometry": { "type": "Point", "coordinates": [-75.0176686, 39.48604167]},
+    "geometry": { "type": "Point", "coordinates": [11.26098633, 43.76712702]},
     "properties": {
-        'title': 'The Landis Theatre',
-        'marker-color': '#F60000',
-        'marker-symbol': 'theatre',
-        'marker-size': 'large',
+        'title': 'The Hometown of Giulia Baldini',
+        'marker-color': '#0096FF',
+        'marker-symbol': 'town',
+        'marker-size': 'medium',
         'images': [
-          ['https://media-cdn.tripadvisor.com/media/photo-s/10/ee/28/a8/renovated-landis-theater.jpg','This is the Landis Theatre, a timeless South Jersey Landmark that I spent most of my adolescence performing in.'],
-          ['https://lh5.googleusercontent.com/proxy/ERJgdO7bD_2a3Hjt9ljdjlCduSyWy_OfnZpHi6GZbn55MGBQclJa-rmfAb5czuqBw1pFCU5hrosQOZ6rynXb5L8FRhLfxE2aIfXhj3YPPpqV_lFWEZGvMcBQUoySWq8q4f3RbnE10Z6aMtIw1A','Built in 1937 and renovated since then, this theater has become the hub of many performing arts opportunities and events around the state of New Jersey.'],
-          ['https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/2/f4/2f47881a-653c-11df-81bd-001cc4c002e0/2f47881a-653c-11df-81bd-001cc4c002e0.image.jpg','The theatre is currently the home of the Bay Atlantic Symphony Orchestra and continues to help illustrate the love and support of the arts in the community.']
+          ['https://drive.google.com/uc?id=1CCC0m-PSPVdKMI2r-4BTpcNfxi549Ppr','A new book by Giulia Baldini entitled, Fashion on The Beat, is more than a collection of interviews with famous designers; it is a statement to brown-skinned girls in Italy that they too can make it in the industry of fashion and fashion writing.'],
+          ['https://drive.google.com/uc?id=1QY7iRmgdZKMjSGZS6EiVr4jmNRX7Ledk','This is the illustrious town of Florence, also known as Firenze, where her roots are based. Her experiences as a brown-skinned Italian-Brazilian have shaped her and fuels the content found in her writing.']
         ]
     }
 }, {
     type: 'Feature',
     "geometry": { "type": "Point", "coordinates": [11.72606, 45.69236]},
     "properties": {
-        'title': 'Tezze sul Brenta, Vicenza, IT',
-        'marker-color': '#F60000',
+        'title': 'A Business Perspective',
+        'marker-color': '#0096FF',
         'marker-symbol': 'industrial',
         'marker-size': 'medium',
         'images': [
-          ['https://lh3.googleusercontent.com/proxy/WJARqxQOsbhiSlWUk0VzkmqF9Rql84FBm1t_PxPuEtruiy35xz4zNN0_jWVhG_Ch4wKZDthf1fDy7xYx1g7nW9gb','Nerys Muller, Stephan Hatchett, and Justyn Moore sat down to interview Erica Anesi, the CEO and CCO of pba SpA located in Tezze sul Brenta, Vicenza. Pba S.p.A is an Italian corporation focused on art-deco and industrial materials.'],
-          ['https://lh3.googleusercontent.com/proxy/WJARqxQOsbhiSlWUk0VzkmqF9Rql84FBm1t_PxPuEtruiy35xz4zNN0_jWVhG_Ch4wKZDthf1fDy7xYx1g7nW9gb','In light of coronavirus, the company has begun manufacturing and distributing microbial materials and surfaces for essential businesses and business workers.']
+          ['https://drive.google.com/uc?id=1H9ksXq4hMr-0lLZGUBvSaEoEXKHkG44h','Nerys Muller, Stephan Hatchett, and Justyn Moore sat down to interview Erica Anesi, the CEO and CCO of pba SpA located in Tezze sul Brenta, Vicenza. Pba S.p.A is an Italian corporation focused on art-deco and industrial materials.'],
+          ['https://drive.google.com/uc?id=1qS8sgPaeYDc2BlMcDrrdlRICbJXhDEZW','<iframe width="280" height="195" src="https://www.youtube.com/embed/lFM4JsQ5_B4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>','In light of the coronavirus, pba SpA has begun manufacturing and distributing anti-microbial materials and surfaces.']
         ]
     }
 }, {
     type: 'Feature',
-    "geometry": { "type": "Point", "coordinates": [-6.42425, 53.72220]},
+    "geometry": { "type": "Point", "coordinates": [-74.00618, 40.65713]},
     "properties": {
-        'title': 'The Memory Sculpture',
-        'marker-color': '#FFD700',
-        'marker-symbol': 'monument',
+        'title': 'pba U.S.A. Branch',
+        'marker-color': '#0096FF',
+        'marker-symbol': 'industrial',
         'marker-size': 'medium',
         'images': [
-          ['http://molloymediaarchaeology.org/images/adriana_memory2.jpg','The Memory Sculpture is another piece kept within the Walled Gardens.'],
-          ['http://molloymediaarchaeology.org/images/grant_pole2.jpg','The sculpture is a remnant of another tree present at the Battle of the Boyne.'],
-          ['http://molloymediaarchaeology.org/images/grant_pole4.jpg','The wooden monument is intended to serve as a reminder to visitors that history never goes away -- it is forever present and forever a part of the people it touches.']
+          ['https://drive.google.com/uc?id=1H9ksXq4hMr-0lLZGUBvSaEoEXKHkG44h','On the opposite side of the world, is the pba U.S.A. headquarters located in Brooklyn, New York.'],
+          ['https://drive.google.com/uc?id=1_xZUQ_3w9cL8LnWkvd3jsR7mgf_Fyb-6','As a primary branch of operation for the company, it is here that Erica Anesi is the acting CEO of this medium-sized business.']
+        ]
+    }
+}, {
+    type: 'Feature',
+    "geometry": { "type": "Point", "coordinates": [12.4589, 41.9042]},
+    "properties": {
+        'title': 'The Perspective of a Photographer',
+        'marker-color': '#0096FF',
+        'marker-symbol': 'cinema',
+        'marker-size': 'medium',
+        'images': [
+          ['https://drive.google.com/uc?id=1mCv-P1wxgiMcunlCWsinG97KwK_UMACP','Having followed up with recent R.U.F.A. graduate Flavia Daniele over Zoom, we were able to grab her perspective on art, creativity, and photography amidst the coronavirus restrictions in Roma, IT.'],
+          ['https://drive.google.com/uc?id=1DNiVDhQ4i2xt3eSbP2eXe1axJKhlCVaB','Stephan Hatchett, Justyn Moore, and Nerys Muller had an interview with Flavia over Zoom, led by Nerys Muller, who conducted the entire interview in Italian.']
         ]
     }
 }];
@@ -236,7 +239,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 });
 
 <!-- SET THE MAP VIEW HERE -->
-map.setView([45.7, 9.0], 5);
+map.setView([46.0, -35.0], 3);
 </script>
 
 
